@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 25px;
+
+    color: white;
+    background-color: #202020;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+a {
+    color: lightblue;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease-in-out;
+}
+
+a:visited {
+    color: lightblue;
+}
+
+a:hover {
+    color: #8080FF;
+    text-decoration: underline;
+}
+
+/*
+  * Divider
+*/
+
+.divider {
+    margin: 1rem auto;
+    background-color: #666666;
+}
+.horizontal {
+    width: 100%;
+    height: 1px;
+}
+
+h2 {
+    color: #ffff;
+}
+
+h3 {
+    color: #dddddd;
+    font-weight: lighter;
+    max-width: 50%;
+    margin-left: 0.5rem;
+    border-left: 5px solid #666666;
+    padding-left: 0.75rem;
+}
+
+.chart-mount {
+    width: 75%;
+    height: 500px;
+    margin: 0 auto;
+    background-color: white;
+}
