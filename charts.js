@@ -21,7 +21,7 @@ const CHARTS_TO_GENERATE = [
     }
 ];
 
-google.charts.load('current', {'packages':['corechart', 'line', 'geochart', 'combochart']});
+google.charts.load('current', {'packages':['corechart', 'line', 'geochart']});
 google.setOnLoadCallback(onLoadCallback);
 
 function generateRandomNumber(min, max) {
