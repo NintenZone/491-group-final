@@ -121,7 +121,7 @@ async function example3(divId) {
     chart.draw(data, options);
 }
 
-function example4(divID) {
+function example4(divId) {
 
     let rowData1 = [['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua  Guinea',
                      'Rwanda', 'Average'],
