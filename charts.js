@@ -13,6 +13,11 @@ const CHARTS_TO_GENERATE = [
         exampleTitle: 'Ex 3: Map Of GDP By State',
         subtitle: 'Interactive map of GDP by US States. Data: <a href="https://www.bea.gov/data/gdp/gdp-state">www.bea.gov</a>',
         functionToCall: example3
+    },
+    {
+        exampleTitle: 'Ex 4: Monthly tea and coffee production by country',
+        subtitle: 'Showing an interactive button',
+        functionToCall: example4
     }
 ];
 
@@ -117,6 +122,7 @@ async function example3(divId) {
 }
 
 function example4(divID) {
+
     var rowData1 = [['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua  Guinea',
                      'Rwanda', 'Average'],
                     ['2004/05', 165, 938, 522, 998, 450, 114.6],
@@ -138,38 +144,39 @@ function example4(divID) {
     data[1] = google.visualization.arrayToDataTable(rowData2);
 
     var options = {
-      width: 400,
-      height: 240,
-      vAxis: {title: "Cups"},
-      hAxis: {title: "Month"},
-      seriesType: "bars",
-      series: {5: {type: "line"}},
-      animation:{
-        duration: 1000,
-        easing: 'out'
-      },
+        width: 400,
+        height: 240,
+        vAxis: {title: "Cups"},
+        hAxis: {title: "Month"},
+        seriesType: "bars",
+        series: {5: {type: "line"}},
+        animation:{
+            duration: 1000,
+            easing: 'out'
+        },
     };
+
     var current = 0;
     // Create and draw the visualization.
     var chart = new google.visualization.ComboChart(document.getElementById('visualization'));
     var button = document.getElementById('b1');
     function drawChart() {
-      // Disabling the button while the chart is drawing.
-      button.disabled = true;
-      google.visualization.events.addListener(chart, 'ready',
-          function() {
-            button.disabled = false;
-            button.value = 'Switch to ' + (current ? 'Tea' : 'Coffee');
-          });
-      options['title'] = 'Monthly ' + (current ? 'Coffee' : 'Tea') + ' Production by Country';
+        // Disabling the button while the chart is drawing.
+        button.disabled = true;
+        google.visualization.events.addListener(chart, 'ready',
+            function() {
+                button.disabled = false;
+                button.value = 'Switch to ' + (current ? 'Tea' : 'Coffee');
+            });
+        options['title'] = 'Monthly ' + (current ? 'Coffee' : 'Tea') + ' Production by Country';
 
-      chart.draw(data[current], options);
+        chart.draw(data[current], options);
     }
     drawChart();
 
     button.onclick = function() {
-      current = 1 - current;
-      drawChart();
+        current = 1 - current;
+        drawChart();
     }
 }
 
