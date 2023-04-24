@@ -16,7 +16,7 @@ const CHARTS_TO_GENERATE = [
     },
     {
         exampleTitle: 'Ex 4: Monthly tea and coffee production by country',
-        subtitle: 'Showing an interactive button',
+        subtitle: 'Showing an interactive on click switch chart',
         functionToCall: example4
     }
 ];
@@ -144,8 +144,6 @@ function example4(divId) {
     data[1] = google.visualization.arrayToDataTable(rowData2);
 
     let options = {
-        width: 400,
-        height: 240,
         vAxis: {title: "Cups"},
         hAxis: {title: "Month"},
         seriesType: "bars",
