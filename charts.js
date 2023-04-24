@@ -159,7 +159,7 @@ function example4(divID) {
     let current = 0;
     // Create and draw the visualization.
     let chart = new google.visualization.ComboChart(document.getElementById(divId));
-    let button = document.getElementById('b1');
+    let button = document.getElementById(divId);
     function drawChart() {
         // Disabling the button while the chart is drawing.
         button.disabled = true;
