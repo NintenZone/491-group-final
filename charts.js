@@ -39,9 +39,9 @@ function example1(divId) {
     data.addColumn('number', 'Y');
 
     for (let i = 0; i < 100; i++) {
-        let min = i - 5;
+        let min = i - 20;
         if (min < 0) min = 0;
-        let max = min + 10;
+        let max = min + 20;
 
         data.addRow([i + 1, generateRandomNumber(min, max)]);
     }
