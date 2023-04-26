@@ -65,7 +65,7 @@ function example2(divId) {
     data.addColumn('number', 'Sine Wave')
     data.addColumn('number', 'Cosine Wave');
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 20; i+=0.1) {
         data.addRow([i + 1, Math.sin(i), Math.cos(i)]);
     }
 
