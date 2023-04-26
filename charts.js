@@ -11,7 +11,7 @@ const CHARTS_TO_GENERATE = [
     },
     {
         exampleTitle: 'Ex 3: Map Of GDP By State',
-        subtitle: 'Interactive map of GDP by US States. Data: <a href="https://www.bea.gov/data/gdp/gdp-state">www.bea.gov</a>',
+        subtitle: 'Interactive map of GDP by US States. Data: <a href="https://raw.githubusercontent.com/PitchInteractiveInc/tilegrams/master/data/us/gdp-by-state.csv">GitHub: PitchInteractiveInc</a>',
         functionToCall: example3
     },
     {
